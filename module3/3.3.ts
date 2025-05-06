@@ -18,11 +18,11 @@
   };
   type AdminUser = {
     name: string;
-    roll: string;
+    role: string;
   };
   const getUser = (user: NormalUser | AdminUser) => {
-    if ("roll" in user) {
-      console.log(`My name is ${user.name} my role is ${user.roll}`);
+    if ("role" in user) {
+      console.log(`My name is ${user.name} my role is ${user.role}`);
     } else {
       console.log(`My name is ${user.name}`);
     }
@@ -33,7 +33,7 @@
   };
   const adminUser: AdminUser = {
     name: "mr.adminUser bhi",
-    roll : "admin",
+    role : "admin",
   };
   getUser(normalUser)
   getUser(adminUser)
